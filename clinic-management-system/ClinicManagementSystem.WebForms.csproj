@@ -415,6 +415,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClinicManagementSystem.Business\ClinicManagementSystem.Business.csproj">
+      <Project>{2de4c282-4697-4fa3-b5ab-dec051f2e745}</Project>
+      <Name>ClinicManagementSystem.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicManagementSystem.Models\ClinicManagementSystem.Models.csproj">
+      <Project>{fba50815-0602-4018-aeac-20e242161593}</Project>
+      <Name>ClinicManagementSystem.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

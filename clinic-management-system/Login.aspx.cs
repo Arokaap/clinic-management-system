@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClinicManagementSystem.Business;
+using ClinicManagementSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,8 +15,18 @@ namespace clinic_management_system
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            string user = txtUsuario.Text;
-            string password = txtPassword.Text;
+            Empleado empleado = EmpleadoBL
+                .getInstance()
+                .AccesoSistema(txtUsuario.Text, txtPassword.Text);
+
+            if (empleado != null)
+            {
+                Response.Write("<script>alert('USUARIO CORRECTO')</script>");
+            }
+            else
+            {
+                Response.Write("<script>alert('USUARIO INCORRECTO')</script>");
+            }
         }
     }
 }
