@@ -22,6 +22,7 @@ namespace clinic_management_system
             if (empleado != null)
             {
                 Response.Write("<script>alert('USUARIO CORRECTO')</script>");
+                Response.Redirect("PanelGeneral.aspx");
             }
             else
             {
